@@ -1,0 +1,26 @@
+{
+  "name": "feedback-collection",
+  "version": "1.0.0",
+  "description": "feedback collection app",
+  "main": "index.js",
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.4.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adb2396/feedback-collection.git"
+  },
+  "author": "akshay bhamare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adb2396/feedback-collection/issues"
+  },
+  "homepage": "https://github.com/adb2396/feedback-collection#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
