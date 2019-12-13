@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/adb2396/feedback-collection#readme",
   "dependencies": {
+    "cookie-session": "^1.3.3",
     "express": "^4.17.1",
     "mongoose": "^5.8.0",
     "passport": "^0.4.1",
