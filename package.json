@@ -24,11 +24,13 @@
   },
   "homepage": "https://github.com/adb2396/feedback-collection#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "concurrently": "^5.0.0",
     "cookie-session": "^1.3.3",
     "express": "^4.17.1",
     "mongoose": "^5.8.0",
     "passport": "^0.4.1",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-google-oauth20": "^2.0.0",
+    "stripe": "^7.14.0"
   }
 }
