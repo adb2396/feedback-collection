@@ -11,8 +11,8 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser((id, done) => {
     User.findById(id).then(user => {
-            done(null, user);
-        })
+        done(null, user);
+    })
 });
 
 passport.use(new GoogleStrategy({
@@ -21,7 +21,7 @@ passport.use(new GoogleStrategy({
     callbackURL: '/auth/google/callback',
     proxy: true
 }, async (accessTocken, refreshToken, profile, done) => {
-        const existingUser = User.findOne({ googleId: profile.id });
+        const existingUser = await User.findOne({ googleId: profile.id });
         if(existingUser) {
             // User record exist in DB
           return done(null, existingUser);
