@@ -5,8 +5,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import * as actions from '../actions';
 import Header from './Header';
 import Landing from './Landing';
-const Dashbord = () => <h2>Dashbord</h2>
-const SurveyNew = () => <h2>SurveyNew</h2>
+import Dashbord from './Dashboard';
+import SurveyNew from './surveys/SurveyNew';
 
 class App extends React.Component {
 

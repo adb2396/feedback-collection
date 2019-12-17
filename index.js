@@ -6,13 +6,14 @@ const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 const path = require('path');
 require('./models/User');
+require('./models/Survey');
 require('./services/passport');
-
-// connecting mongodb 
-mongoose.connect(keys.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// connecting mongodb 
+mongoose.connect(keys.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(bodyParser.json());
 
@@ -32,6 +33,7 @@ app.use(passport.session());
 // auth routes setup 
 require('./routes/authRoutes')(app);
 require('./routes/payment')(app);
+require('./routes/surveyRoutes')(app);
 
 if( process.env.NODE_ENV === 'production') {
     // Express will serve up production assets
